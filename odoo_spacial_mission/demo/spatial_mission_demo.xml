@@ -1,4 +1,4 @@
-<?xml version="1.0" enconding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <odoo>
     <data noupdate="1">
@@ -7,8 +7,8 @@
             <field name="seats">12</field>
             <field name="engines">4</field>
             <field name="width">10</field>
-            <field name="height">10</field><
-            field name="length">10</field>
+            <field name="height">10</field>
+            <field name="length">10</field>
         </record>
         
     </data>

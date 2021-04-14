@@ -2,7 +2,6 @@
 
 <odoo>
     <!-- Data demo basic -->
-    <!--
     <data noupdate="1">
         <record model="academy.course" id="erp_101">
             <field name="name">ERP 101</field>
@@ -27,9 +26,9 @@
             
         </record>        
     </data>
-    -->
     
-    <data>
+    
+    <!--<data>
         <data noupdate="1">
             <record model="academy.course" id="erp_101">
                 <field name="name">ERP 101</field>
@@ -55,6 +54,6 @@
                 
             </record>
         </data>
-    </data>
+    </data>-->
         
 </odoo>
