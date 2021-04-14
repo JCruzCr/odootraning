@@ -15,3 +15,7 @@ class Task(models.Model):
         ], default='aid'
         
     )
+    
+    start_task = fields.Datetime()
+    end_task = fields.Datetime()
+    repated = fields.Integer(string='Repeated taks', default=0)

@@ -10,4 +10,6 @@ class Book(models.Model):
     author = fields.Char(string='Author', help='Author Name', size=1000, required=True)
     pages = fields.Integer(string='Pages', help='Book\'s pages', required=False)
     ed = fields.Char(string='Edition', help='Book edition', size=500, required=False)
+    isbn = fields.Char(string='ISBN', help='ISBN', size=100, required=False)
+    
     

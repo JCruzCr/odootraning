@@ -18,7 +18,7 @@
         
     ],
     'demo': [
-        
+        'demo/spatial_mission_demo.xml',
     ],
     
     
