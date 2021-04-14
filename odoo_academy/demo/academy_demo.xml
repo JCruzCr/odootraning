@@ -5,7 +5,7 @@
     <data noupdate="1">
         <record model="academy.course" id="erp_101">
             <field name="name">ERP 101</field>
-            <field name="descriptio">Learn ERP System</field>
+            <field name="description">Learn ERP System</field>
             <field name="level">beginner</field>
         </record>
         
