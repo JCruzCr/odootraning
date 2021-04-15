@@ -14,6 +14,6 @@
         
     ],
     'demo':[
-        
+        'demo/volunteer_demo.xml',
     ],
 }

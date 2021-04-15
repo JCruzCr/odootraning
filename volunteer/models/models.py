@@ -11,7 +11,8 @@ class Task(models.Model):
     type = fields.Selection(
         [
             ('aid', 'Help People'),
-            ('guide', 'Guide People')
+            ('guide', 'Guide People'),
+            ('other', 'Other'),
         ], default='aid'
         
     )

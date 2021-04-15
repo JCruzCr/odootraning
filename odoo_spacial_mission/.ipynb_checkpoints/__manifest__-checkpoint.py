@@ -15,6 +15,10 @@
         'base',
     ],
     'data': [
+        'security/spatial_mission_security.xml',
+        'security/ir.model.access.csv',
+        'views/spatial_mission_views.xml',
+        'views/spatial_mission_menuitems.xml',
         
     ],
     'demo': [

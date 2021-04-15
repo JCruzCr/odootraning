@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record model="res.groups" id="group_spatial_mission_admin">
+        <field name="name">Odoo / Spatial Mission</field>
+        
+    </record>
+    
+</odoo>

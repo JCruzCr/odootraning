@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        
+        <record model="ir.ui.view" id="spatial_mission_spatial_plane_view">
+            <field name="name">spatial.mission.spatial.plane.form</field>
+            <field name="model">spatial.mission.spatial.plane</field>
+            <field name="arch" type="xml">
+                <form string="Plane Form">
+                    <field name="name" />
+                    <field name="seats" />
+                    <field name="engines" />
+                    <field name="width" />
+                    <field name="height" />
+                    <field name="length" />
+                    <field name="type" />
+                    <field name="active" />
+                </form>
+            </field>
+        </record>
+        
+    </data>
+</odoo>

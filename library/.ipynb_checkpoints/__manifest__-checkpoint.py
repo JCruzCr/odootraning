@@ -13,11 +13,14 @@
     ],
     
     'data': [
-        
+        'security/library_security.xml',
+        'security/ir.model.access.csv',
+        'views/library_menuitems.xml',
+        'views/book_view.xml',
     ],
     
     'demo': [
-        
+        'demo/library_demo.xml',
     ],
     
 }

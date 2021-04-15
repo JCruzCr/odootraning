@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    
+    <data noupdate="1">
+        
+        <record model="volunteer.task" id="task_1">
+            <field name="name">Cuidar Pirritos</field>
+            <field name="description">Cuidar un total de 20 pirritos</field>
+            <field name="type">other</field>
+            <field name="start_task">2021-12-12 12:12:12</field>
+            <field name="end_task">2021-12-12 16:12:12</field>
+            <field name="repated">1</field>
+        </record>
+        
+        
+        
+        
+        <record model="volunteer.task" id="task_2">
+            <field name="name">Tercera Edad</field>
+            <field name="description">Cuidar Persona de la Tercera Edad</field>
+            <field name="type">aid</field>
+            <field name="start_task">2021-01-13 13:00:00</field>
+            <field name="end_task">2021-01-13 17:00:00</field>
+            <field name="repated">2</field>
+        </record>
+        
+        <record model="volunteer.task" id="task_3">
+            <field name="name">Limpieza</field>
+            <field name="description">Limpiar Avenidas</field>
+            <field name="type">other</field>
+            <field name="start_task">2021-02-02 15:00:00</field>
+            <field name="end_task">2021-02-02 16:30:00</field>
+            <field name="repated">2</field>
+        </record>
+        
+    </data>
+</odoo>

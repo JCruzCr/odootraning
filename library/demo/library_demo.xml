@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <data noupdate="1">
+        <record model="library.book" id="book_1">
+            <field name="name">Origamis</field>
+            <field name="author">Alexander Strousrop</field>
+            <field name="pages">240</field>
+            <field name="ed">3 Edición</field>
+            <field name="isbn">0321543254123</field>
+        </record>
+        
+        <record model="library.book" id="book_2">
+            <field name="name">Los Mayas</field>
+            <field name="author">Carlos Sadness</field>
+            <field name="pages">214</field>
+            <field name="ed">2 Edición</field>
+            <field name="isbn">321-3-4321-2134-4</field>
+        </record>
+        
+        <record model="library.book" id="book_3">
+            <field name="name">Alfarería</field>
+            <field name="author">Alexander Strousrop</field>
+            <field name="pages">432</field>
+            <field name="ed">1 Edición</field>
+            <field name="isbn">555-2-1234-1233-1</field>
+        </record>
+        
+        
+    </data>
+</odoo>

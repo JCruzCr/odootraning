@@ -1,0 +1,3 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+spatial_mission_spatial_plane_admin,spatial mission spatial plane admin,model_spatial_mission_spatial_plane,group_spatial_mission_admin,1,1,1,1
+spatial_mission_spatial_plane_read_all,spatial mission spatial plane read all,model_spatial_mission_spatial_plane,,1,0,0,0
