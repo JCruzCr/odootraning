@@ -11,7 +11,10 @@
     'version': '14.0.0.0.1',
     'license': 'LGPL-3',
     'data':[
-        
+        'security/security_volunteer.xml',
+        'security/ir.model.access.csv',
+        'views/volunteer_views.xml',
+        'views/volunteer_menuitems.xml',
     ],
     'demo':[
         'demo/volunteer_demo.xml',

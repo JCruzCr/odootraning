@@ -2,9 +2,9 @@
 
 <odoo>
     <data>
-        
-        <record model="ir.ui.view" id="spatial_mission_spatial_plane_view">
-            <field name="name">spatial.mission.spatial.plane.form</field>
+
+        <record model="ir.ui.view" id="spatial_mission_spatial_plane_view_form">
+            <field name="name">mission.form</field>
             <field name="model">spatial.mission.spatial.plane</field>
             <field name="arch" type="xml">
                 <form string="Plane Form">
@@ -19,6 +19,63 @@
                 </form>
             </field>
         </record>
+        
+        <record model="ir.ui.view" id="spatial_mission_spatial_plane_list">
+            <field name="name">mission.list</field>
+            <field name="model">spatial.mission.spatial.plane</field>
+            <field name="arch" type="xml">
+                <tree string="Course List">
+                    <field name="name" />
+                    <field name="seats" />
+                    <field name="engines" />
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="spatial_mission_spatial_plane_search">
+            <field name="name">mission.search</field>
+            <field name="model">spatial.mission.spatial.plane</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" />
+                    <field name="type" />
+                </search>
+            </field>
+        </record>
+        
+        
+        <record model="ir.ui.view" id="spatial_mission_spatial_mission_form">
+            <field name="name">mission.form</field>
+            <field name="model">mission</field>
+            <field name="arch" type="xml">
+                <form string="Mission Form">
+                    <sheet>
+                        <field name="name" />
+                        <field name="description" />
+                        <notebook>
+                            <page string="Plane">
+                                <field name="plane_ids" />
+                            </page>
+                            <page string="Tripulación">
+                                <field name="partner_mission_ids" />
+                            </page>
+                        </notebook>                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="spatial_mission_spatial_mission_list">
+            <field name="name">mission.list</field>
+            <field name="model">mission</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        
         
     </data>
 </odoo>

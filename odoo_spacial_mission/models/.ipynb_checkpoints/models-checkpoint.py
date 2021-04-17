@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from odoo.exceptions import UserError, ValidationError
 
 
 class SpatialPlane(models.Model):
@@ -22,4 +23,28 @@ class SpatialPlane(models.Model):
     ])
     active = fields.Boolean(string='Is Active?', help='Is active...')
     
+    @api.constrains('engines')
+    def _check_engines(self):
+        for rec in self:
+            if rec.engines < 2:
+                raise UserError('The engines must be more than 2')
+                
+                
+    @api.constrains('length') 
+    def _check_length(self):
+        for rec in self:
+            if rec.length >= rec.width:
+                raise UserError('The length must be more than width')
+    
+    
+class SpatialMission(models.Model):
+    _name = 'mission'
+    _description = 'Mission'
+    
+    name = fields.Char(string="Mission Name", help="Mission Name", size=500, required=True)
+    description = fields.Char(string='Mission Description', help='Mission Description', size=500, required=True)
+    
+    
+    plane_ids = fields.Many2many(comodel_name='spatial.mission.spatial.plane')
+    partner_mission_ids = fields.Many2many(comodel_name='res.partner')
     

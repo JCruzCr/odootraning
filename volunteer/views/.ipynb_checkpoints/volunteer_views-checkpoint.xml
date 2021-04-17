@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="volunteer_task_form_view">
+            <field name="name">volunteer.task.form</field>
+            <field name="model">volunteer.task</field>
+            <field name="arch" type="xml">
+                <form string="Task">
+                    <header name="statusbar">
+                        <button string="Draft" type="object" name="draft" attrs="{'invisible': [('state', 'in', ('finished', 'draft'))]}" class="oe_highlight" />
+                        <button string="Progress" type="object" name="progress" attrs="{'invisible': [('state', 'in', ('finished', 'progress'))]}" />
+                        <button string="Finished" type="object" name="finished" attrs="{'invisible': [('state', 'in', ('finished', 'draft'))]}" />
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet>
+                        <group>
+                            <group string="Head">
+                                <field name="name" />
+                                <field name="description" />
+                                <field name="leader_id" />
+                            </group>
+                            <group string="Complement">
+                                <field name="start_task" />
+                                <field name="repated" />
+                                <field name="end_task" />
+                                <field name="type" />
+                            </group>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="volunteer_task_view_list">
+            <field name="name">volunteer.task.list</field>
+            <field name="model">volunteer.task</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="start_task" />
+                    <field name="end_task" />
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="volunteer_task_view_search">
+            <field name="name">volunteer.task.search</field>
+            <field name="model">volunteer.task</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" />
+                    <field name="description" />
+                    <field name="type" />
+                </search>
+            </field>
+        </record>
+            
+    </data>
+</odoo>

@@ -20,3 +20,22 @@ class Task(models.Model):
     start_task = fields.Datetime()
     end_task = fields.Datetime()
     repated = fields.Integer(string='Repeated taks', default=0)
+    
+    state = fields.Selection(string='State', help='State of the task',
+        selection=[
+            ('draft', 'Draft'),
+            ('progress', 'Progess'),
+            ('finished', 'Finished')
+        ], default='draft')
+    
+    leader_id = fields.Many2one(comodel_name='res.partner', string='Leader', help='Leader of task')
+    
+    def draft(self):
+        self.state='draft'
+        
+    def progress(self):
+        self.state='progress'
+        
+    def finished(self):
+        self.state='finished'
+        

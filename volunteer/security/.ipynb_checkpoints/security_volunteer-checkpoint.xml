@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record model="res.groups" id="group_volunteer_admin">
+        <field name="name">Volunteer / Admin</field>
+    </record>
+</odoo>

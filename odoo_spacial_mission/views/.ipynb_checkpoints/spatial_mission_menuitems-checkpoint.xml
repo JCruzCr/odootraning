@@ -3,9 +3,9 @@
 <odoo>
     <data>
         <record model="ir.actions.act_window" id="spatial_mission_list_action">
-            <field name="name">Mission</field>
+            <field name="name">Plane</field>
             <field name="res_model">spatial.mission.spatial.plane</field>
-            <field name="view_mode">tree,view</field>
+            <field name="view_mode">tree,form</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create the first Plane
@@ -13,9 +13,22 @@
             </field>
         </record>
         
+        <record model="ir.actions.act_window" id="spatial_mission_spatial_mission_list_action">
+            <field name="name">Mission</field>
+            <field name="res_model">mission</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create the first mission
+                </p>
+            </field>
+        </record>
+        
         <menuitem name="Spatial Mission" id="spatial_mission_plane_parent" sequence="1000" />
         <menuitem name="Mission" id="spatial_mission_mission" sequence="2000" parent="spatial_mission_plane_parent" />
         <menuitem name="Plane" id="spatial_mission_menu" sequence="3000" parent="spatial_mission_mission" action="spatial_mission_list_action" />
+        
+        <menuitem name="Mission" id="spatial_mission_spatial_mission" sequence="4000" parent="spatial_mission_mission" action="spatial_mission_spatial_mission_list_action" />
     </data>
 </odoo>
     
