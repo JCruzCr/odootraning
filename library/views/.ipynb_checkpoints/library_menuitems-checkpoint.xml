@@ -17,10 +17,21 @@
         <record model="ir.actions.act_window" id="rental_list_action">
             <field name="name">Rental</field>
             <field name="res_model">library.rental</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,map</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create the first rental
+                </p>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="book_copy_list_action">
+            <field name="name">Book Copies</field>
+            <field name="res_model">library.book.copy</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create the first Copy Book
                 </p>
             </field>
         </record>
@@ -30,5 +41,7 @@
         <menuitem name="Books" id="library_book" sequence="3000" parent="library_book_sub" action="book_list_action" />
         
         <menuitem name="Rental" id="library_rental_sub" sequence="4000" parent="library_book_sub" action="rental_list_action" />
+        <menuitem name="Book Copy" id="lirbary_book_copy_sub" sequence="5000" parent="library_book_sub" action="book_copy_list_action" />
+        
     </data>
 </odoo>

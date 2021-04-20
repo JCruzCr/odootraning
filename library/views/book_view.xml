@@ -50,14 +50,66 @@
                 <form>
                     <sheet>
                         <group>
-                            <field name="name" />
-                            <field name="book_id" />
+                            <!--<field name="name" />
+                            <field name="book_id" />-->
                             <field name="customer_id" />
+                            <field name="book_copy_ids" />
                         </group>
                     </sheet>
                 </form>
             </field>
         </record>
-                                       
+        
+        <record model="ir.ui.view" id="library_rental_map_view">
+            <field name="name">library.rental.map</field>
+            <field name="model">library.rental</field>
+            <field name="arch" type="xml">
+                <map res_partner="customer_id">
+                        <!--<field name="name" string="Title" />-->
+                        <field name="customer_id" string="Customer Name" />
+                </map>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="library_rental_view_tree">
+            <field name="name">library.rental.tree</field>
+            <field name="model">library.rental</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="customer_id" />
+                    
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="library_book_copy_inherit_form_view">
+            <field name="name">library.book.copy.form</field>
+            <field name="model">library.book.copy</field>
+            <field name="inherit_id" ref="library.library_book_model_view" />
+            <field name="arch" type="xml">
+                <!--<notebook position="inside">-->
+                    <!--<page string="Otros">-->
+                        <group>
+                            <field name="book_reference" />
+                            <field name="available" />
+                        </group>
+                    <!--</page>-->
+                <!--</notebook>-->
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="library_book_copy_inherit_tree_view">
+            <field name="name">library.book.copy.tree</field>
+            <field name="model">library.book.copy</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="author" />
+                    <field name="available" />
+                </tree>
+            </field>
+        </record>
+        
+
     </data>
 </odoo>

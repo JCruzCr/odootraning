@@ -17,7 +17,7 @@ class Task(models.Model):
         
     )
     
-    start_task = fields.Datetime()
+    start_task = fields.Datetime(default=fields.Date.today)
     end_task = fields.Datetime()
     repated = fields.Integer(string='Repeated taks', default=0)
     
@@ -29,6 +29,9 @@ class Task(models.Model):
         ], default='draft')
     
     leader_id = fields.Many2one(comodel_name='res.partner', string='Leader', help='Leader of task')
+    
+    approval_ids = fields.Many2one(comodel_name='approval.request', string='Task', help='Task Approval')
+    
     
     def draft(self):
         self.state='draft'

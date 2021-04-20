@@ -21,7 +21,7 @@
     'version': '0.1',
     
     'depends': [
-      'base',
+      'base', 'sale',
     ],
     
     'data': [
@@ -30,7 +30,7 @@
         'views/academy_menuitems.xml',
         'views/course_view.xml',
         'views/session_view.xml',
-        
+        'views/sale_views_inherit.xml'
 
     ],
     

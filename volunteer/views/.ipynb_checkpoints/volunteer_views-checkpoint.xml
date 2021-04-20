@@ -56,6 +56,29 @@
                 </search>
             </field>
         </record>
-            
+        
+        <record model="ir.ui.view" id="volunteer_task_view_gantt">
+            <field name="name">volunteer.task.gantt</field>
+            <field name="model">volunteer.task</field>
+            <field name="arch" type="xml">
+                <gantt date_start="start_task" date_stop="end_task" string="Task" color="leader_id" default_group_by="leader_id">
+                    <field name="name" />
+                </gantt>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="volunteer_task_approval_inherit_form">
+            <field name="name">volunteer.task.approval.form</field>
+            <field name="model">approval.request</field>
+            <field name="inherit_id" ref="approvals.approval_request_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//sheet//notebook" position="inside">
+                    <group string="Tasks">
+                        <field name="task_id" />
+                    </group>
+                </xpath>
+                
+            </field>
+        </record>
     </data>
 </odoo>

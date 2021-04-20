@@ -20,7 +20,7 @@ class Session(models.Model):
     
     duration = fields.Integer(string='Session Days', default=1)
     
-    end_date = fields.Date(string='End Date', compute='_compute_end_date', inverse='_inverse_end_date', stored=True)
+    end_date = fields.Date(string='End Date', compute='_compute_end_date', inverse='_inverse_end_date', store=True)
     
     
     @api.depends('start_date', 'duration')

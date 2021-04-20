@@ -18,6 +18,7 @@
                             <field name="length" />
                             <field name="type" />
                             <field name="active" />
+                            <field name="fuel_amount" />
                         </group>
                     </sheet>
                 </form>
@@ -67,6 +68,9 @@
                                 <page string="Tripulación">
                                     <field name="partner_mission_ids" />
                                 </page>
+                                <group string="Projects">
+                                    <field name="project_id" />
+                                </group>
                             </notebook>  
                     </sheet>
                 </form>
@@ -81,6 +85,17 @@
                     <field name="name" />
                     <field name="description" />
                 </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="spatial_mission_spatial_plane_graph_view">
+            <field name="name">plane.graph</field>
+            <field name="model">spatial.mission.spatial.plane</field>
+            <field name="arch" type="xml">
+                <graph string="Fuel used for engines">
+                    <field name="engines" />
+                    <field name="fuel_amount" type="measure"/>
+                </graph>
             </field>
         </record>
         

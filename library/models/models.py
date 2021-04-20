@@ -29,7 +29,21 @@ class RentalBook(models.Model):
     _description = 'This is the rental model'
     
     
-    book_id = fields.Many2one(comodel_name='library.book', string='Book', help='Book related', ondelete='cascade', required=True)
-    name = fields.Char(string='Book', help='Related Book', related='book_id.author' )
-    
+    #book_id = fields.Many2one(comodel_name='library.book', string='Book', help='Book related', ondelete='cascade', required=True)
+    #name = fields.Char(string='Book', help='Related Book', related='book_id.author' )
     customer_id = fields.Many2one(comodel_name='res.partner', string='Customer', help='Customer related', ondelete='cascade', required=True)
+    book_copy_ids = fields.Many2many(comodel_name='library.book.copy', string='Assign Book', help='Asign Book to Customer')
+    
+class BookCopy(models.Model):
+    _name = 'library.book.copy'
+    _inherits = {'library.book': 'book_ids'}
+    
+    book_ids = fields.Many2one(comodel_name='library.book', ondelete='cascade')
+    
+    book_reference = fields.Char(string='Book Reference', help='Book Referenda Data', size=100, required=True)
+    available = fields.Boolean(string='Is Available?', help='Is Available Book?', default=True)
+    
+    
+    _sql_constraints = [
+        ('book_reference_unique', 'unique(book_reference)', 'Book Reference Must Be Unique')
+    ]

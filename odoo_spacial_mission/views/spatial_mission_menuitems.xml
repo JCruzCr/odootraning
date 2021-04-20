@@ -5,7 +5,7 @@
         <record model="ir.actions.act_window" id="spatial_mission_list_action">
             <field name="name">Plane</field>
             <field name="res_model">spatial.mission.spatial.plane</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,graph</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create the first Plane

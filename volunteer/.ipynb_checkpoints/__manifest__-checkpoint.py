@@ -10,6 +10,11 @@
     """,
     'version': '14.0.0.0.1',
     'license': 'LGPL-3',
+    
+    'depends':[
+      'base', 'web_gantt', 'approvals',
+    ],
+    
     'data':[
         'security/security_volunteer.xml',
         'security/ir.model.access.csv',

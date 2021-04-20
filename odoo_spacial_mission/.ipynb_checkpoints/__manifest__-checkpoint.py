@@ -12,13 +12,14 @@
     'author': 'IINGEN',
     'application': True,
     'depends': [
-        'base',
+        'base', 'project',
     ],
     'data': [
         'security/spatial_mission_security.xml',
         'security/ir.model.access.csv',
         'views/spatial_mission_views.xml',
         'views/spatial_mission_menuitems.xml',
+        'views/project_mission.xml',
         
     ],
     'demo': [

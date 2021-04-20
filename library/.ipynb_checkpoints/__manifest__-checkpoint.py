@@ -9,7 +9,7 @@
     'application': True,
     
     'depends': [
-        'base',
+        'base', 'web_map',
     ],
     
     'data': [

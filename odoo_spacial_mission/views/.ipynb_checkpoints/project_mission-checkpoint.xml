@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="project_spatial_mission_form_view">
+            <field name="name">project.mission.form</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project" />
+            <field name="arch" type="xml">
+                <!--<notebook>
+                    <page string="Mission">
+                        <group>
+                            <field name="mission_id" />
+                        </group>
+                    </page>
+                </notebook>-->
+                <xpath expr="//sheet//notebook" position="inside">
+                    <page string="Mission">
+                        <group>
+                            <field name="mission_id" />
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
