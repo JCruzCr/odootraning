@@ -8,14 +8,18 @@
             <field name="model">spatial.mission.spatial.plane</field>
             <field name="arch" type="xml">
                 <form string="Plane Form">
-                    <field name="name" />
-                    <field name="seats" />
-                    <field name="engines" />
-                    <field name="width" />
-                    <field name="height" />
-                    <field name="length" />
-                    <field name="type" />
-                    <field name="active" />
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="seats" />
+                            <field name="engines" />
+                            <field name="width" />
+                            <field name="height" />
+                            <field name="length" />
+                            <field name="type" />
+                            <field name="active" />
+                        </group>
+                    </sheet>
                 </form>
             </field>
         </record>
@@ -50,16 +54,20 @@
             <field name="arch" type="xml">
                 <form string="Mission Form">
                     <sheet>
-                        <field name="name" />
-                        <field name="description" />
-                        <notebook>
-                            <page string="Plane">
-                                <field name="plane_ids" />
-                            </page>
-                            <page string="Tripulación">
-                                <field name="partner_mission_ids" />
-                            </page>
-                        </notebook>                        
+                        <group>
+                            <field name="leader_name" />
+                            <field name="leader_id" />
+                            <field name="name" />
+                            <field name="description" />                      
+                        </group>
+                            <notebook>
+                                <page string="Plane">
+                                    <field name="plane_ids" />
+                                </page>
+                                <page string="Tripulación">
+                                    <field name="partner_mission_ids" />
+                                </page>
+                            </notebook>  
                     </sheet>
                 </form>
             </field>

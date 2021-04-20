@@ -47,4 +47,6 @@ class SpatialMission(models.Model):
     
     plane_ids = fields.Many2many(comodel_name='spatial.mission.spatial.plane')
     partner_mission_ids = fields.Many2many(comodel_name='res.partner')
+    leader_id = fields.Many2one(comodel_name='res.partner')
+    leader_name = fields.Char(string="Leader Name", help="Leader Name", related='leader_id.name')
     

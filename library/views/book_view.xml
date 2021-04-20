@@ -7,11 +7,15 @@
             <field name="model">library.book</field>
             <field name="arch" type="xml">
                 <form string="Book Form">
-                    <field name="name" />
-                    <field name="author" />
-                    <field name="pages" />
-                    <field name="ed" />
-                    <field name="isbn" />
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="author" />
+                            <field name="pages" />
+                            <field name="ed" />
+                            <field name="isbn" />
+                        </group>
+                    </sheet>
                 </form>
             </field>
         </record>
@@ -36,6 +40,22 @@
                     <field name="name" />
                     <field name="author" />
                 </search>                        
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="library_rental_model_view">
+            <field name="name">library.rental.form</field>
+            <field name="model">library.rental</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="book_id" />
+                            <field name="customer_id" />
+                        </group>
+                    </sheet>
+                </form>
             </field>
         </record>
                                        

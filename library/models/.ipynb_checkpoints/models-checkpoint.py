@@ -18,8 +18,18 @@ class Book(models.Model):
     def _onchange_isbn(self):
         if self.pages < 1:
             raise UserError('Pages\'s book must be more than 0')
-        if (len(self.isbn)-self.isbn.count('-')) != 13:
-            raise ValidationError('ISBN must be 13')
+        #if not self.isbn:
+        #    if (len(self.isbn)-self.isbn.count('-')) != 13:
+        #        raise ValidationError('ISBN must be 13')
                 
     
     
+class RentalBook(models.Model):
+    _name = 'library.rental'
+    _description = 'This is the rental model'
+    
+    
+    book_id = fields.Many2one(comodel_name='library.book', string='Book', help='Book related', ondelete='cascade', required=True)
+    name = fields.Char(string='Book', help='Related Book', related='book_id.author' )
+    
+    customer_id = fields.Many2one(comodel_name='res.partner', string='Customer', help='Customer related', ondelete='cascade', required=True)
