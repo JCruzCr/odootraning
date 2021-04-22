@@ -30,8 +30,9 @@
         'views/academy_menuitems.xml',
         'views/course_view.xml',
         'views/session_view.xml',
-        'views/sale_views_inherit.xml'
-
+        'views/sale_views_inherit.xml',
+        'views/product_view_inherit.xml',
+        'wizard/sale_wizard_view.xml',
     ],
     
     'demo': [
