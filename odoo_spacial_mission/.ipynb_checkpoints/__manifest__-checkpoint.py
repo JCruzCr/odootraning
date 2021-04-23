@@ -20,6 +20,7 @@
         'views/spatial_mission_views.xml',
         'views/spatial_mission_menuitems.xml',
         'views/project_mission.xml',
+        'report/spatial_plane.xml',
         
     ],
     'demo': [

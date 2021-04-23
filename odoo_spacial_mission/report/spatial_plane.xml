@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <report id="report_spatial_plane" model="spatial.mission.spatial.plane" string="Plane Report" name="odoo_spacial_mission.report_plane_document" file="odoo_spacial_mission.report_spatial" report_type="qweb-html" />    
+    <template id="report_plane_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2 t-field="doc.name" class="mt16" />
+                        <div class="row mt32 mb32" id="plane_info">
+                            <div class="col-auto mw-100 mb-2">
+                                <h4>Generals</h4>
+                                <br />
+                                <t t-if="doc.name">
+                                    <strong>Name:     </strong><span t-field="doc.name" />
+                                </t>
+                                <t t-if="doc.type">
+                                    <strong>Type:     </strong><span t-field="doc.type" />
+                                </t>
+                                <t t-if="doc.engines">
+                                    <strong>Engines:     </strong><span t-field="doc.engines" />
+                                </t>
+                                <t t-if="doc.fuel_amount">
+                                    <strong>Fuel Amount: </strong><span t-field="doc.fuel_amount" />
+                                </t>
+
+                            </div>
+                        </div>
+                        <h4>Mission</h4>
+                        
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
